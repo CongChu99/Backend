@@ -21,15 +21,19 @@ public class MovieServiceImpl implements IMovieService {
 
 
     @Override
-    public List<MovieDTO> findAll() {
-        List<Movie> movies = movieRepository.findAll();
-        List<MovieDTO> movieDTOS = new ArrayList<>();
-        for (Movie movie : movies){
-            MovieDTO movieDTO = modelMapper.map(movie, MovieDTO.class);
+    public List<Movie> findAll() {
+        return movieRepository.findAll();
+    }
 
+    @Override
+    public void createOrUpdateMovie(Movie movie) {
+        movieRepository.save(movie);
 
-        }
+    }
 
-        return ;
+    @Override
+    public void deleteById(int id) {
+        movieRepository.deleteById(id);
+
     }
 }
