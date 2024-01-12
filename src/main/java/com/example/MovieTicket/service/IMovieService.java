@@ -7,5 +7,10 @@ import java.util.List;
 
 public interface IMovieService {
 
-    List<MovieDTO> findAll();
+
+    List<Movie> findAll();
+
+    void createOrUpdateMovie(Movie movie);
+
+    void deleteById(int id);
 }
