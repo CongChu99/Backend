@@ -3,6 +3,8 @@ package com.example.MovieTicket.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name="Movie")
@@ -31,5 +33,8 @@ public class Movie {
 
     @Column(name="duaration",nullable = false)
     private int duaration ;
+
+    @OneToMany(mappedBy = "Movie")
+    private List<Schedule> schedules;
 
 }
