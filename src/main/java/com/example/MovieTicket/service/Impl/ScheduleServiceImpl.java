@@ -29,4 +29,9 @@ public class ScheduleServiceImpl implements IScheduleService {
     public void createOrUpdate(Schedule schedule) {
         scheduleRepository.save(schedule);
     }
+
+    @Override
+    public void deleteById(int id) {
+
+    }
 }

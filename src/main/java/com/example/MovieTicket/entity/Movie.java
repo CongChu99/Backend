@@ -19,6 +19,7 @@ public class Movie {
 
     @Column(name="content",nullable = false,length = 200)
     private String content;
+    
     @Column(name="genre",length = 50)
     private String genre;
 
@@ -29,12 +30,12 @@ public class Movie {
     private String cast;
 
     @Column(name="releaseDate",nullable = false)
-    private Data releaseDate;
+    private String releaseDate;
 
     @Column(name="duaration",nullable = false)
     private int duaration ;
 
-    @OneToMany(mappedBy = "Movie")
-    private List<Schedule> schedules;
+//    @OneToMany(mappedBy = "Movie")
+//    private List<Schedule> schedules;
 
 }
