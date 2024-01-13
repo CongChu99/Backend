@@ -30,8 +30,8 @@ public class MovieController {
         movieService.createOrUpdateMovie(movie);
     }
 
-    @DeleteMapping("api/v1/movie/{id}")
-    public void deleteById(@PathVariable int id){
+    @DeleteMapping("api/v1/movie")
+    public void deleteById(@RequestParam int id){
         movieService.deleteById(id);
     }
 }

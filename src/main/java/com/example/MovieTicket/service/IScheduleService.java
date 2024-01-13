@@ -13,4 +13,6 @@ public interface IScheduleService {
     Page<ScheduleDTO> findAll(Pageable pageable, String search);
 
     void createOrUpdate(Schedule schedule);
+
+    void deleteById(int id);
 }

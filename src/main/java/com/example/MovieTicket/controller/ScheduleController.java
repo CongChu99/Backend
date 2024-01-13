@@ -30,4 +30,9 @@ public class ScheduleController {
         scheduleService.createOrUpdate(schedule);
     }
 
+    @DeleteMapping("api/v1/schedule")
+    private void deleteById(@RequestParam int id){
+        scheduleService.deleteById(id);
+    }
+
 }
