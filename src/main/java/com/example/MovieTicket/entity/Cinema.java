@@ -22,6 +22,6 @@ public class Cinema {
     @Column(name="city",nullable = false,length = 50)
     private String city;
 
-    @OneToMany(mappedBy = "Cinema")
-    private List<Schedule> schedules;
+//    @OneToMany(mappedBy = "Cinema")
+//    private List<Schedule> schedules;
 }
