@@ -12,7 +12,8 @@ public class MovieDTO {
     private String genre;
     private String director;
     private String cast;
+    private String releaseDate;
+    private int duaration;
     private List<ScheduleDTO> scheduleDTOS;
-
 
 }

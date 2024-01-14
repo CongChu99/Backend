@@ -10,7 +10,7 @@ public class MovieCreateOrUpdateForm {
     private String genre;
     private String director;
     private String cast;
-    private Data releaseDate;
+    private String releaseDate;
     private int duaration;
 
 }

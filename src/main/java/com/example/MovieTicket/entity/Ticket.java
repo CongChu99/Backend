@@ -15,7 +15,7 @@ public class Ticket {
 
 
     @Column(name = "seatNumber",nullable = false, unique = true, length = 100)
-    private String seatnumber;
+    private String seatNumber;
 
     @Column(name = "status",nullable = false, length = 100)
     private String status;
@@ -27,9 +27,9 @@ public class Ticket {
     @JoinColumn(name = "schedule_id", nullable = false)
     private Schedule schedule;
 
-    @ManyToOne
-    @JoinColumn(name = "movie_id", nullable = false)
-    private Movie movie;
+//    @ManyToOne
+//    @JoinColumn(name = "movie_id", nullable = false)
+//    private Movie movie;
 
 //    @ManyToOne
 //    @JoinColumn(name = "user_id", nullable = false)
