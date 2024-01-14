@@ -27,7 +27,7 @@ public class CinemaController {
         cinemaService.createOrUpdate(cinema);
     }
 
-    @DeleteMapping("api/v1/cinema/deleteById")
+    @DeleteMapping("api/v1/cinema")
     public void deleteById(@RequestParam int id){
         cinemaService.deleteById(id);
 

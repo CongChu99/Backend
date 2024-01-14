@@ -8,7 +8,4 @@ public class ScheduleDTO {
     private String showtime;
     private String title;
     private String cinemaName;
-
-
-
 }
