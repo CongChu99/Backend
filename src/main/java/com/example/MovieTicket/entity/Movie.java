@@ -3,6 +3,7 @@ package com.example.MovieTicket.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -19,7 +20,7 @@ public class Movie {
 
     @Column(name="content",nullable = false,length = 200)
     private String content;
-    
+
     @Column(name="genre",length = 50)
     private String genre;
 
