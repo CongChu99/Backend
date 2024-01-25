@@ -21,7 +21,12 @@ public class CinemaController {
     public Page<CinemaDTO> findAll(Pageable pageable){
         Page<CinemaDTO> cinema = cinemaService.findAll(pageable);
         return cinema;
+    }
 
+    @GetMapping("api/v1/cinema/findById")
+    public CinemaDTO findById(@RequestParam int id) {
+        CinemaDTO cinemaDTO = cinemaService.findById(id);
+        return cinemaDTO;
     }
 
     @PostMapping("api/v1/cinema")

@@ -71,4 +71,16 @@ public class CinemaServiceImpl implements ICinemaService {
     public void deleteById(int id) {
         cinemaRepository.deleteById(id);
     }
+
+    @Override
+    public CinemaDTO findById(int id) {
+
+        Optional<Cinema> optional = cinemaRepository.findById(id);
+        if (!optional.isPresent())
+            throw new RuntimeException("Id ko dung");
+
+        Cinema cinema = optional.get();
+        CinemaDTO cinemaDTO = modelMapper.map(cinema,CinemaDTO.class);
+        return cinemaDTO;
+    }
 }

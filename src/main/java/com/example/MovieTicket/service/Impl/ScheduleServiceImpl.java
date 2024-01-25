@@ -95,7 +95,10 @@ public class ScheduleServiceImpl implements IScheduleService {
 
     @Override
     public void deleteById(int id) {
-
+        Optional<Schedule> optional = scheduleRepository.findById(id);
+        if (!optional.isPresent())
+            throw new RuntimeException("Id ko dung");
+        scheduleRepository.deleteById(id);
     }
 
     @Override

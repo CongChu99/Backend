@@ -16,4 +16,6 @@ public interface ICinemaService {
     void createOrUpdate(CinemaCreateOrUpdateForm form);
 
     void deleteById(int id);
+
+    CinemaDTO findById(int id);
 }

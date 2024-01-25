@@ -50,9 +50,8 @@ public class MovieServiceImpl implements IMovieService {
         if (form.getId() == 0) {
             // chuyen tu form -> entity
             Movie movie = modelMapper.map(form, Movie.class);
-
-
             movieRepository.save(movie);
+
         }else {
             Optional<Movie> optional = movieRepository.findById(form.getId());
             if (!optional.isPresent())
